@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mockito="http://www.mockito.org/spring/mockito"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.mockito.org/spring/mockito http://www.mockito.org/spring/mockito.xsd">
+    
+    <bean class="ru.kichenko.sales.web.config.JacksonConfig"/>
+    
+    <mockito:mock id="productService" class="ru.kichenko.sales.web.service.ProductServiceImpl" />
+    <mockito:mock id="saleService" class="ru.kichenko.sales.web.service.SaleServiceImpl" />
+    <mockito:mock id="productDao" class="ru.kichenko.sales.data.dao.ProductDao" />  
+    <mockito:mock id="saleDao" class="ru.kichenko.sales.data.dao.SaleDao" />
+</beans>
